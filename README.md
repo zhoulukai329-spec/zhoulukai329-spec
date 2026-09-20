@@ -6,7 +6,7 @@
 # Hi, I'm zhoulukai329-spec 👋
 ****
 
-A university student who is weak in coding.
+A university student who is weak in coding. Now I'm trying to learn backend development and AI agent development.
 
 📍 China,Shanghai
 </div>
