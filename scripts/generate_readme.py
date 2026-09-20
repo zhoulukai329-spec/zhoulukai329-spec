@@ -24,52 +24,69 @@ def badge(item: dict, accent: str) -> str:
     color = item.get("color", accent).lstrip("#")
     params = f"&logo={quote(str(logo))}&logoColor=white" if logo else ""
     url = f"https://img.shields.io/badge/{quote(name)}-{color}?style=flat-square{params}"
-    return f"[![{html.escape(name)}]({url})]({url})"
+    return f'<img src="{url}" alt="{html.escape(name)}" height="28" />'
+
+
+def personalize_assets(profile: dict) -> None:
+    """Replace the template author's visible label in bundled SVG assets."""
+    display_name = html.escape(str(profile["name"]), quote=False)
+    for filename in ("bloom-header.svg", "bloom-header-night.svg", "tech-stack.svg"):
+        path = ROOT / filename
+        if path.exists():
+            content = path.read_text(encoding="utf-8")
+            for old_name in ("yuki4266", "Your Name"):
+                content = content.replace(old_name, display_name)
+            path.write_text(content, encoding="utf-8")
 
 
 def render(data: dict) -> str:
     p, theme, stats = data["profile"], data["theme"], data["stats"]
+    images = data.get("images", {})
+    links_config = data.get("links", {})
     username = p["username"]
     lines = [
         '<div align="center">',
-        '<picture><source media="(prefers-color-scheme: dark)" srcset="bloom-header-night.svg" />',
-        f'<img src="bloom-header.svg" width="900" alt="{html.escape(p["name"])} — profile banner" /></picture>',
+        f'<picture><source media="(prefers-color-scheme: dark)" srcset="{html.escape(images.get("header_night", "bloom-header-night.svg"), quote=True)}" />',
+        f'<img src="{html.escape(images.get("header_day", "bloom-header.svg"), quote=True)}" width="900" alt="{html.escape(p["name"])} — profile banner" /></picture>',
         f"\n# Hi, I'm {html.escape(p['name'])} 👋",
         f"**{html.escape(p['tagline'])}**",
         f"\n{html.escape(p['bio'])}",
         (f"\n📍 {html.escape(p['location'])}" if p.get("location") else ""),
         "</div>",
-        '<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="sky-night.svg" /><img src="sky.svg" width="900" alt="" /></picture></div>',
+        f'<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="{html.escape(images.get("sky_night", "sky-night.svg"), quote=True)}" /><img src="{html.escape(images.get("sky_day", "sky.svg"), quote=True)}" width="900" alt="" /></picture></div>',
     ]
-    links = [f"[GitHub](https://github.com/{quote(username)})"]
-    for label, url in (("LinkedIn", p.get("linkedin")), ("Twitter", p.get("twitter")), ("Website", p.get("website")), ("Email", p.get("email"))):
+    links = [f"[GitHub]({links_config.get('github') or 'https://github.com/' + quote(username)})"]
+    for label, url in (("LinkedIn", links_config.get("linkedin")), ("Twitter", links_config.get("twitter")), ("Website", p.get("website")), ("Email", p.get("email"))):
         if url:
             links.append(f"[{label}]({url if label != 'Email' else 'mailto:' + url})")
-    lines += ["\n" + " · ".join(links), "", "## Tech stack", ""]
+    lines += ["\n" + " · ".join(links), "", "## Tech stack", "", '<div align="center">']
     groups: dict[str, list[dict]] = {}
     for item in data.get("stack", []):
         groups.setdefault(item.get("group", "Tools"), []).append(item)
     for group, items in groups.items():
-        lines.append(f"**{html.escape(group)}**  " + " ".join(badge(i, theme["accent"]) for i in items) + "\n")
+        lines.append(f"<strong>{html.escape(group)}</strong><br/>" + "&nbsp;".join(badge(i, theme["accent"]) for i in items) + "<br/><br/>")
+    lines.append("</div>")
 
     if any(stats.get(k) for k in ("show_stats", "show_streak", "show_activity")):
         lines += ["## GitHub activity", ""]
         if stats.get("show_stats"):
-            lines.append(f'<img height="165" src="https://github-readme-stats.vercel.app/api?username={quote(username)}&show_icons=true&hide_border=true&theme=transparent&title_color={theme["accent"]}&icon_color={theme["accent"]}" alt="GitHub statistics for {html.escape(username)}" />')
+            lines.append(f'![GitHub statistics for {html.escape(username)}](https://github-readme-stats.vercel.app/api?username={quote(username)}&show_icons=true&hide_border=true&theme=transparent&title_color={theme["accent"]}&icon_color={theme["accent"]})')
         if stats.get("show_streak"):
-            lines.append(f'<img height="165" src="https://streak-stats.demolab.com?user={quote(username)}&hide_border=true&background=00000000&ring={theme["accent"]}&fire={theme["accent"]}&currStreakLabel={theme["accent"]}" alt="GitHub contribution streak for {html.escape(username)}" />')
+            lines.append(f'![GitHub contribution streak for {html.escape(username)}](https://streak-stats.demolab.com?user={quote(username)}&hide_border=true&background=00000000&ring={theme["accent"]}&fire={theme["accent"]}&currStreakLabel={theme["accent"]})')
         if stats.get("show_activity"):
-            lines.append(f'<img src="https://github-readme-activity-graph.vercel.app/graph?username={quote(username)}&bg_color=00000000&color={theme["label"]}&line={theme["accent"]}&point={theme["accent"]}&area=true&hide_border=true" alt="GitHub activity graph for {html.escape(username)}" />')
+            lines.append(f'![GitHub activity graph for {html.escape(username)}](https://github-readme-activity-graph.vercel.app/graph?username={quote(username)}&bg_color=00000000&color={theme["label"]}&line={theme["accent"]}&point={theme["accent"]}&area=true&hide_border=true)')
     if stats.get("show_snake"):
         lines += ["", "## Contribution graph", "", f'<img alt="Contribution graph for {html.escape(username)}" src="https://raw.githubusercontent.com/{quote(username)}/{quote(username)}/output/github-contribution-grid-snake.svg" />']
     if stats.get("show_profile_views"):
         lines += ["", f'![Profile views](https://komarev.com/ghpvc/?username={quote(username)}&label=Profile%20views&color={theme["accent"]}&style=flat)']
-    lines += ["", '<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="garden-footer-night.svg" /><img src="garden-footer.svg" width="900" alt="Profile footer" /></picture></div>']
+    lines += ["", f'<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="{html.escape(images.get("footer_night", "garden-footer-night.svg"), quote=True)}" /><img src="{html.escape(images.get("footer_day", "garden-footer.svg"), quote=True)}" width="900" alt="Profile footer" /></picture></div>']
     return "\n".join(lines) + "\n"
 
 
 def main() -> None:
     data = tomllib.loads(CONFIG.read_text(encoding="utf-8"))
+    if data.get("images", {}).get("personalize", True):
+        personalize_assets(data["profile"])
     generated = f"{START}\n{render(data)}{END}"
     current = README.read_text(encoding="utf-8") if README.exists() else ""
     if START in current and END in current:

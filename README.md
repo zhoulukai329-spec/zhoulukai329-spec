@@ -1,9 +1,3 @@
-# GitHub profile README template
-
-Edit [`profile.toml`](profile.toml) to personalise this profile, then push to `main`. The `Generate profile README` workflow rebuilds the section below. Add, remove, or reorder `[[stack]]` entries without touching SVG assets. The activity cards, streak, contribution graph, and profile-view badge all use the configured GitHub username at render time; no personal statistics are stored in this repository.
-
-The decorative SVGs are optional. You can replace the header/footer images or remove those lines from `scripts/generate_readme.py` without changing the profile data model.
-
 <!-- PROFILE:GENERATED:START -->
 <div align="center">
 <picture><source media="(prefers-color-scheme: dark)" srcset="bloom-header-night.svg" />

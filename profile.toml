@@ -3,11 +3,20 @@
 [profile]
 username = "zhoulukai329-spec"
 name = "zhoulukai329-spec"
-tagline = "Keep coding."
 bio = "A university student who is weak in coding."
 location = "China,Shanghai"
 website = ""
 email = "zhoulukai329@gmail.com"
+
+[images]
+# Set false when you want to hand-edit the bundled SVG artwork without name replacement.
+personalize = true
+header_day = "bloom-header.svg"
+header_night = "bloom-header-night.svg"
+sky_day = "sky.svg"
+sky_night = "sky-night.svg"
+footer_day = "garden-footer.svg"
+footer_night = "garden-footer-night.svg"
 
 [theme]
 accent = "A58ACB"
@@ -152,3 +161,4 @@ show_streak = true
 show_activity = true
 show_snake = true
 show_profile_views = true
+
