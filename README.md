@@ -23,11 +23,12 @@ A university student who is weak in coding.
 <strong>Data</strong><br/><img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" height="28" />&nbsp;<img src="https://img.shields.io/badge/MySQL-4169E1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" height="28" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4169E1?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" height="28" /><br/><br/>
 <strong>Operating System</strong><br/><img src="https://img.shields.io/badge/Linux-4169E1?style=flat-square&logo=linux&logoColor=white" alt="Linux" height="28" /><br/><br/>
 </div>
+
 ## GitHub activity
 
-![GitHub statistics for zhoulukai329-spec](https://github-readme-stats.vercel.app/api?username=zhoulukai329-spec&show_icons=true&hide_border=true&theme=transparent&title_color=A58ACB&icon_color=A58ACB)
+
 ![GitHub contribution streak for zhoulukai329-spec](https://streak-stats.demolab.com?user=zhoulukai329-spec&hide_border=true&background=00000000&ring=A58ACB&fire=A58ACB&currStreakLabel=A58ACB)
-![GitHub activity graph for zhoulukai329-spec](https://github-readme-activity-graph.vercel.app/graph?username=zhoulukai329-spec&bg_color=00000000&color=6F6878&line=A58ACB&point=A58ACB&area=true&hide_border=true)
+
 
 ## Contribution graph
 
