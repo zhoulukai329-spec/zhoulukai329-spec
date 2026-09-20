@@ -3,6 +3,7 @@
 [profile]
 username = "zhoulukai329-spec"
 name = "zhoulukai329-spec"
+tagline = ""
 bio = "A university student who is weak in coding."
 location = "China,Shanghai"
 website = ""
@@ -154,6 +155,12 @@ name = "SQLite"
 logo = "sqlite"
 color = "4169E1"
 group = "Data"
+
+[[stack]]
+name = "Linux"
+logo = "linux"
+color = "4169E1"
+group = "Operating System"
 
 [stats]
 show_stats = true
