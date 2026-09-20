@@ -11,7 +11,7 @@ email = "zhoulukai329@gmail.com"
 
 [images]
 # Set false when you want to hand-edit the bundled SVG artwork without name replacement.
-personalize = true
+personalize = false
 header_day = "bloom-header.svg"
 header_night = "bloom-header-night.svg"
 sky_day = "sky.svg"
