@@ -1,0 +1,154 @@
+# Personalise this file. The workflow regenerates README.md after every push.
+
+[profile]
+username = "zhoulukai329-spec"
+name = "zhoulukai329-spec"
+tagline = "Keep coding."
+bio = "A university student who is weak in coding."
+location = "China,Shanghai"
+website = ""
+email = "zhoulukai329@gmail.com"
+
+[theme]
+accent = "A58ACB"
+label = "6F6878"
+
+[scene]
+# Used by .github/workflows/sky.yml. Leave weather/season blank for live values.
+latitude = "35.99"
+longitude = "-78.90"
+timezone = "America/New_York"
+weather = ""
+season = ""
+
+[links]
+github = "https://github.com/zhoulukai329-spec"
+linkedin = "https://www.linkedin.com/in/zlk329/"
+twitter = ""
+
+[[stack]]
+name = "Python"
+logo = "python"
+color = "3776AB"
+group = "Languages & tools"
+
+[[stack]]
+name = "Java"
+logo = "intellijidea"
+color = "3178C6"
+group = "Languages & tools"
+
+[[stack]]
+name = "Go"
+logo = "go"
+color = "3178C6"
+group = "Languages & tools"
+
+[[stack]]
+name = "C++"
+logo = "c++"
+color = "3178C6"
+group = "Languages & tools"
+
+[[stack]]
+name = "Docker/Podman"
+logo = "docker"
+color = "2496ED"
+group = "Languages & tools"
+
+[[stack]]
+name = "Nginx"
+logo = "nginx"
+color = "2496ED"
+group = "Languages & tools"
+
+[[stack]]
+name = "FastAPI"
+logo = "fastapi"
+color = "2496ED"
+group = "Backend"
+
+[[stack]]
+name = "Spring"
+logo = "spring"
+color = "2496ED"
+group = "Backend"
+
+[[stack]]
+name = "SpringBoot"
+logo = "springboot"
+color = "2496ED"
+group = "Backend"
+
+[[stack]]
+name = "SpringCloud"
+logo = "springcloud"
+color = "2496ED"
+group = "Backend"
+
+[[stack]]
+name = "GoGin"
+logo = "go"
+color = "2496ED"
+group = "Backend"
+
+[[stack]]
+name = "PyTorch"
+logo = "pytorch"
+color = "EE4C2C"
+group = "AI"
+
+[[stack]]
+name = "LangChain"
+logo = "langchain"
+color = "1C3C3C"
+group = "AI"
+
+[[stack]]
+name = "LangGraph"
+logo = "langgraph"
+color = "1C3C3C"
+group = "AI"
+
+[[stack]]
+name = "Pydantic"
+logo = "pydantic"
+color = "1C3C3C"
+group = "AI"
+
+[[stack]]
+name = "Ollama"
+logo = "ollama"
+color = "1C3C3C"
+group = "AI"
+
+[[stack]]
+name = "HuggingFace"
+logo = "huggingface"
+color = "1C3C3C"
+group = "AI"
+
+[[stack]]
+name = "PostgreSQL"
+logo = "postgresql"
+color = "4169E1"
+group = "Data"
+
+[[stack]]
+name = "MySQL"
+logo = "mysql"
+color = "4169E1"
+group = "Data"
+
+[[stack]]
+name = "SQLite"
+logo = "sqlite"
+color = "4169E1"
+group = "Data"
+
+[stats]
+show_stats = true
+show_streak = true
+show_activity = true
+show_snake = true
+show_profile_views = true
