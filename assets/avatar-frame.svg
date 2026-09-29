@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="100" cy="100" r="90" />
+    </clipPath>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#39C5BB;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFB7C5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#39C5BB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 圆形头像占位底 -->
+  <circle cx="100" cy="100" r="92" fill="#FFF5F7" stroke="url(#border-grad)" stroke-width="4" />
+
+  <!-- 占位图标：音符 -->
+  <g transform="translate(100,85)" opacity="0.3">
+    <ellipse cx="0" cy="22" rx="12" ry="9" transform="rotate(-20,0,22)" fill="#39C5BB" />
+    <line x1="10" y1="18" x2="10" y2="-25" stroke="#39C5BB" stroke-width="3" stroke-linecap="round" />
+    <path d="M 10,-25 Q 30,-15 25,0" fill="#39C5BB" />
+  </g>
+
+  <!-- 提示文字 -->
+  <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#B0B0B0">
+    放上你的头像
+  </text>
+
+  <!-- 左上小樱花 -->
+  <g transform="translate(22,22)" opacity="0.6">
+    <circle cx="6" cy="0" r="4" fill="#FFB7C5" />
+    <circle cx="0" cy="-4" r="4" fill="#FFB7C5" />
+    <circle cx="0" cy="4" r="4" fill="#FFB7C5" />
+    <circle cx="-5" cy="-1" r="4" fill="#FFB7C5" />
+    <circle cx="-5" cy="7" r="4" fill="#FFB7C5" />
+    <circle cx="0" cy="0" r="2" fill="#FFD1DC" />
+  </g>
+
+  <!-- 右下小樱花 -->
+  <g transform="translate(178,178)" opacity="0.5">
+    <circle cx="5" cy="0" r="3.5" fill="#FFB7C5" />
+    <circle cx="0" cy="-3.5" r="3.5" fill="#FFB7C5" />
+    <circle cx="0" cy="3.5" r="3.5" fill="#FFB7C5" />
+    <circle cx="-4" cy="-1" r="3.5" fill="#FFB7C5" />
+    <circle cx="-4" cy="6" r="3.5" fill="#FFB7C5" />
+    <circle cx="0" cy="0" r="1.8" fill="#FFD1DC" />
+  </g>
+
+  <!-- 小星星 -->
+  <polygon points="170,28 172,36 180,36 173,41 176,48 170,44 164,48 167,41 160,36 168,36" fill="#FFD700" opacity="0.5" />
+</svg>

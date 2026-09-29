@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="diamond">
+      <polygon points="100,0 200,100 100,200 0,100" />
+    </clipPath>
+  </defs>
+  <rect x="0" y="0" width="200" height="200" fill="#FFF5F7" clip-path="url(#diamond)" />
+  <g transform="translate(100,85)" opacity="0.25">
+    <ellipse cx="0" cy="22" rx="12" ry="9" transform="rotate(-20,0,22)" fill="#39C5BB" />
+    <line x1="10" y1="18" x2="10" y2="-25" stroke="#39C5BB" stroke-width="3" stroke-linecap="round" />
+    <path d="M 10,-25 Q 30,-15 25,0" fill="#39C5BB" />
+  </g>
+  <text x="100" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#B0B0B0">放入图片</text>
+  <polygon points="100,0 200,100 100,200 0,100" fill="none" stroke="#FFB7C5" stroke-width="3" stroke-dasharray="8,4" />
+</svg>

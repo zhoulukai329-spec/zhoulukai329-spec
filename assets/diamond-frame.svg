@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="diamond-clip">
+      <polygon points="100,10 190,100 100,190 10,100" />
+    </clipPath>
+  </defs>
+
+  <!-- 菱形边框底 -->
+  <polygon points="100,10 190,100 100,190 10,100" fill="#FFF5F7" stroke="#FFB7C5" stroke-width="3" stroke-dasharray="8,4" />
+
+  <!-- 内部占位图标 -->
+  <g transform="translate(100,90)" opacity="0.3">
+    <ellipse cx="0" cy="22" rx="12" ry="9" transform="rotate(-20,0,22)" fill="#39C5BB" />
+    <line x1="10" y1="18" x2="10" y2="-25" stroke="#39C5BB" stroke-width="3" stroke-linecap="round" />
+    <path d="M 10,-25 Q 30,-15 25,0" fill="#39C5BB" />
+  </g>
+
+  <!-- 提示文字 -->
+  <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#B0B0B0">
+    放入图片
+  </text>
+
+  <!-- 小樱花角标 -->
+  <g transform="translate(85,30) scale(0.5)" opacity="0.5">
+    <circle cx="6" cy="0" r="4" fill="#FFB7C5" />
+    <circle cx="0" cy="-4" r="4" fill="#FFB7C5" />
+    <circle cx="0" cy="4" r="4" fill="#FFB7C5" />
+    <circle cx="-5" cy="-1" r="4" fill="#FFB7C5" />
+    <circle cx="-5" cy="7" r="4" fill="#FFB7C5" />
+    <circle cx="0" cy="0" r="2" fill="#FFD1DC" />
+  </g>
+</svg>
