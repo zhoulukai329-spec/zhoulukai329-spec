@@ -40,11 +40,11 @@
   </g>
 
   <text x="600" y="130" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="52" font-weight="bold" fill="#FFFFFF" stroke="#FF8FA3" stroke-width="1.5">
-    ✨ 欢迎来到 你的名字 的主页 ✨
+    ✨ Welcome to zhoulukai329-spec's profile ✨
   </text>
 
   <text x="600" y="185" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF" opacity="0.85">
-    每一个代码都是一首歌，每一次提交都是一次心跳
+    Happy Coding
   </text>
 
   <line x1="60" y1="278" x2="1140" y2="278" stroke="#39C5BB" stroke-width="2.5" stroke-linecap="round" opacity="0.6" />
